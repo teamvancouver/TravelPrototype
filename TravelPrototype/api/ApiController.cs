@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -21,6 +22,8 @@ namespace TravelPrototype.Controllers
         // POST: ItineraryServiceAPI
         public HttpResponseMessage PostItin(ItineraryModel Itin)
         {
+            Trace.WriteLine("PostItin reached");
+            Trace.WriteLine(Itin.ToString());
             return Request.CreateResponse(HttpStatusCode.OK, "Dein Post ist voll total supi");
         }
     }

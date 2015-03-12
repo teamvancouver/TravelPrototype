@@ -9,6 +9,11 @@ namespace TravelPrototype.Models
     public class ItineraryModel
     {
         public int ID { get; set; }
+
+        public override String ToString()
+        {
+            return ID.ToString();
+        }
     }
 
     public class ItineraryDBContext : DbContext

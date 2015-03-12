@@ -1,7 +1,9 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Tracing;
 
 namespace TravelPrototype
 {
@@ -9,6 +11,11 @@ namespace TravelPrototype
     {
         public static void Register(HttpConfiguration config)
         {
+            SystemDiagnosticsTraceWriter traceWriter = config.EnableSystemDiagnosticsTracing();
+            traceWriter.IsVerbose = true;
+            traceWriter.MinimumLevel = TraceLevel.Info;
+            //config.Services.Replace(typeof(ITraceWriter), LogManager.GetLogger("NLog"));
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

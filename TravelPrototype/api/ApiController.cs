@@ -20,11 +20,18 @@ namespace TravelPrototype.Controllers
         }
 
         // POST: ItineraryServiceAPI
-        public HttpResponseMessage PostItin(ItineraryModel Itin)
+        public IHttpActionResult PostItin(ItineraryModel Itin)
         {
-            Trace.WriteLine("PostItin reached");
-            Trace.WriteLine(Itin.ToString());
-            return Request.CreateResponse(HttpStatusCode.OK, "Dein Post ist voll total supi");
+            //Trace.WriteLine("START PostItin");
+            //Trace.WriteLine("Request Header:");
+            //Trace.WriteLine(Request.Content.Headers.ToString());
+            //Trace.WriteLine("Request JSON:");
+            //Trace.WriteLine(Itin.ToString());
+            var response = Ok(Itin);
+            //Trace.WriteLine("Response JSON:");
+            //Trace.WriteLine(response.Content.ToString());
+            //Trace.WriteLine("END PostItin");
+            return response;
         }
     }
 }

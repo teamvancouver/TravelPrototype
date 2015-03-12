@@ -17,5 +17,11 @@ namespace TravelPrototype.Controllers
         {
             return db.Itineraries;
         }
+
+        // POST: ItineraryServiceAPI
+        public HttpResponseMessage PostItin(ItineraryModel Itin)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, "Dein Post ist voll supi");
+        }
     }
 }

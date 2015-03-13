@@ -11,6 +11,34 @@ namespace TravelPrototype.Models
     public class ItineraryModel
     {
         public int ID { get; set; }
+        public int member_id { get; set; }
+        public int itinerary_id { get; set; }
+        public string status { get; set; }
+        public string first_name { get; set; }
+        public string last_name { get; set; }
+        public string destination { get; set; }
+        public string state { get; set; }
+        public string postal_code { get; set; }
+        public string country { get; set; }
+        public DateTime begin_datetime { get; set; }
+        public string begin_time_zone { get; set; }
+        public string begin_time_zone_id { get; set; }
+        public DateTime end_datetime { get; set; }
+        public string end_time_zone { get; set; }
+        public string end_time_zone_id { get; set; }
+        public string lat { get; set; }
+        public string lon { get; set; }
+        public string privacy { get; set; }
+        public int personal { get; set; }
+        public int business { get; set; }
+        public string verified { get; set; }
+        public float distance { get; set; }
+        public string duration { get; set; }
+        public string headline { get; set; }
+        public Uri url { get; set; }
+        public string harvested { get; set; }
+        public DateTime created { get; set; }
+        public DateTime updated { get; set; }
 
         public List<SegmentModel> segments { get; set; }
 

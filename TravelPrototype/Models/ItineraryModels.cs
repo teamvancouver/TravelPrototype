@@ -172,5 +172,25 @@ namespace TravelPrototype.Models
         public string car_notes { get; set; }
 
 
+        // Activity
+        public string activity_type { get; set; }
+        public string activity_name { get; set; }
+        public string end_address1 { get; set; }
+        public string end_address2 { get; set; }
+        public string end_city_name { get; set; }
+        public string end_admin_code { get; set; }
+        public string end_country { get; set; }
+        public string end_zip { get; set; }
+        public string end_lat { get; set; }
+        public string end_lon { get; set; }
+        public DateTime start_datetime { get; set; }
+        public string start_time_zone { get; set; }
+        public string start_time_zone_id { get; set; }
+        public DateTime end_datetime { get; set; }
+        public string end_time_zone { get; set; }
+        public string end_time_zone_id { get; set; }
+        public string activity_notes { get; set; }
+
+
     }
 }

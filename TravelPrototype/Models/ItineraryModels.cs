@@ -138,6 +138,38 @@ namespace TravelPrototype.Models
         public string arrival_gate { get; set; }
         public string air_notes { get; set; }
 
+        // Car
+        public string car_company { get; set; }
+        public string normalized_car_company { get; set; }
+        public string pickup_address1 { get; set; }
+        public string pickup_address2 { get; set; }
+        public string pickup_city_name { get; set; }
+        public string pickup_city_code { get; set; }
+        public string pickup_admin_code { get; set; }
+        public string pickup_country { get; set; }
+        public string pickup_zip { get; set; }
+        public string pickup_lat { get; set; }
+        public string pickup_lon { get; set; }
+        public DateTime pickup_datetime { get; set; }
+        public string pickup_time_zone { get; set; }
+        public string pickup_time_zone_id { get; set; }
+        public string dropoff_address1 { get; set; }
+        public string dropoff_address2 { get; set; }
+        public string dropoff_city_name { get; set; }
+        public string dropoff_city_code { get; set; }
+        public string dropoff_admin_code { get; set; }
+        public string dropoff_country { get; set; }
+        public string dropoff_zip { get; set; }
+        public string dropoff_lat { get; set; }
+        public string dropoff_lon { get; set; }
+        public DateTime dropoff_datetime { get; set; }
+        public string dropoff_time_zone { get; set; }
+        public string dropoff_time_zone_id { get; set; }
+        public string reservation_id { get; set; }
+        public string car_type { get; set; }
+        public string car_description { get; set; }
+        public string hours_of_operation { get; set; }
+        public string car_notes { get; set; }
 
 
     }

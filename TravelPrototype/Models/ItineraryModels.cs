@@ -74,16 +74,20 @@ namespace TravelPrototype.Models
         public string city_name { get; set; }
         public string admin_code { get; set; }
         //public enum country country { get; set; }
+        public string country { get; set; }
         public string zip { get; set; }
         public string lat { get; set; }
         public string lon { get; set; }
         public DateTime checkin_date { get; set; }
         //public enum time_zone checkin_time_zone { get; set; }
+        public string checkin_time_zone { get; set; }
         public DateTime checkout_date { get; set; }
         //public enum time_zone checkout_time_zone { get; set; }
+        public string checkout_time_zone { get; set; }
         public string time_zone_id { get; set; }
         public float price { get; set; }
         //public enum Currency currency { get; set; }
+        public string currency { get; set; }
         public int number_of_rooms { get; set; }
         public string confirmation_no { get; set; }
         public string support_phone { get; set; }
@@ -101,6 +105,40 @@ namespace TravelPrototype.Models
         public DateTime created { get; set; }
         public DateTime updated { get; set; }
         public string metadata { get; set; }
+
+        // Air
+        public string airline { get; set; }
+        public string iata_code { get; set; }
+        public string normalized_airline { get; set; }
+        public string flight_num { get; set; }
+        public string seat_assignment { get; set; }
+        public string origin { get; set; }
+        public string origin_city_name { get; set; }
+        public string origin_admin_code { get; set; }
+        public string origin_country { get; set; }
+        public string origin_lat { get; set; }
+        public string origin_lon { get; set; }
+        public DateTime departure_datetime { get; set; }
+        public string departure_time_zone { get; set; }
+        public string departure_time_zone_id { get; set; }
+        public DateTime arrival_datetime { get; set; }
+        public string arrival_time_zone { get; set; }
+        public string arrival_time_zone_id { get; set; }
+        public string pax_number { get; set; }
+        public string ticket_number { get; set; }
+        public string class_of_service { get; set; }
+        public string meal { get; set; }
+        public string stops { get; set; }
+        public string duration { get; set; }
+        public string equipment_code { get; set; }
+        public string equipment_type { get; set; }
+        public string departure_terminal { get; set; }
+        public string departure_gate { get; set; }
+        public string arrival_terminal { get; set; }
+        public string arrival_gate { get; set; }
+        public string air_notes { get; set; }
+
+
 
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Tracing;
 using TravelPrototype.Models;
 
 namespace TravelPrototype.Controllers
@@ -22,15 +23,9 @@ namespace TravelPrototype.Controllers
         // POST: ItineraryServiceAPI
         public IHttpActionResult PostItin(ItineraryModel Itin)
         {
-            //Trace.WriteLine("START PostItin");
-            //Trace.WriteLine("Request Header:");
-            //Trace.WriteLine(Request.Content.Headers.ToString());
-            //Trace.WriteLine("Request JSON:");
-            //Trace.WriteLine(Itin.ToString());
+            //example Custom Trace
+            Configuration.Services.GetTraceWriter().Info(Request, "TravelPrototype.Controllers.ItineraryServiceAPIController", "Test");
             var response = Ok(Itin);
-            //Trace.WriteLine("Response JSON:");
-            //Trace.WriteLine(response.Content.ToString());
-            //Trace.WriteLine("END PostItin");
             return response;
         }
     }

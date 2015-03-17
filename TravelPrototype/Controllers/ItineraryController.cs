@@ -46,7 +46,7 @@ namespace TravelPrototype.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID")] ItineraryModel itineraryModel)
+        public ActionResult Create([Bind(Include = "ID,member_id,itinerary_id,status,first_name,last_name,destination,state,postal_code,country,begin_datetime,begin_time_zone,begin_time_zone_id,end_datetime,end_time_zone,end_time_zone_id,lat,lon,privacy,personal,business,verified,distance,duration,headline,harvested,created,updated")] ItineraryModel itineraryModel)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace TravelPrototype.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID")] ItineraryModel itineraryModel)
+        public ActionResult Edit([Bind(Include = "ID,member_id,itinerary_id,status,first_name,last_name,destination,state,postal_code,country,begin_datetime,begin_time_zone,begin_time_zone_id,end_datetime,end_time_zone,end_time_zone_id,lat,lon,privacy,personal,business,verified,distance,duration,headline,harvested,created,updated")] ItineraryModel itineraryModel)
         {
             if (ModelState.IsValid)
             {

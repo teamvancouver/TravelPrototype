@@ -11,11 +11,173 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.member_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itinerary_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postal_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.begin_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.begin_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.begin_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.privacy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.personal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.business)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.verified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.headline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.harvested)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updated)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.member_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itinerary_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postal_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.begin_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.begin_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.begin_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.privacy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.personal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.business)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.verified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.distance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.headline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.harvested)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updated)
+        </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |

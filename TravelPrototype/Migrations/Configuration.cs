@@ -4,6 +4,7 @@ namespace TravelPrototype.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using TravelPrototype.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TravelPrototype.Models.ItineraryDBContext>
     {
@@ -27,6 +28,9 @@ namespace TravelPrototype.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Itineraries.AddOrUpdate(tp => tp.destination,
+                new ItineraryModel { destination = "Rome" });
         }
     }
 }

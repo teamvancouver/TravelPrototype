@@ -26,12 +26,13 @@ namespace TravelPrototype
             config.Services.Replace(typeof(ITraceWriter), new LogWriter());
 
             //Code First => Auto Migration on Azure
-            if (bool.Parse(ConfigurationManager.AppSettings["MigrateDatabaseToLatestVersion"]))
-            {
-                var configuration = new Migrations.Configuration();
-                var migrator = new DbMigrator(configuration);
-                migrator.Update();
-            }
+            //if (bool.Parse(ConfigurationManager.AppSettings["MigrateDatabaseToLatestVersion"]))
+            //{
+            //    var configuration = new Migrations.Configuration();
+            //    var migrator = new DbMigrator(configuration);
+            //    //DbMigrationsConfiguration.AutomaticMigrationsEnabled = true;
+            //    migrator.Update();
+            //}
         }
     }
 }

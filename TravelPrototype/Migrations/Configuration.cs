@@ -29,7 +29,7 @@ namespace TravelPrototype.Migrations
             //
 
             context.Itineraries.AddOrUpdate(i => i.ID,
-                new ItineraryModel { ID = 1, member_id = 7, itinerary_id = 42, begin_datetime = DateTime.Now, end_datetime = DateTime.Now, personal = 0, business = 1, distance = 66, created = DateTime.Now, updated = DateTime.Now }
+                new ItineraryModel { ID = 30, member_id = 7, itinerary_id = 42, begin_datetime = DateTime.Now, end_datetime = DateTime.Now, personal = 0, business = 1, distance = 66, created = DateTime.Now, updated = DateTime.Now }
             );
         }
     }

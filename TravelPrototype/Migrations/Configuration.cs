@@ -11,7 +11,6 @@ namespace TravelPrototype.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "TravelPrototype.Models.ItineraryDBContext";
         }
 
         protected override void Seed(TravelPrototype.Models.ItineraryDBContext context)
@@ -29,8 +28,9 @@ namespace TravelPrototype.Migrations
             //    );
             //
 
-            context.Itineraries.AddOrUpdate(tp => tp.destination,
-                new ItineraryModel { destination = "Rome" });
+            context.Itineraries.AddOrUpdate(i => i.ID,
+                new ItineraryModel { ID = 1, member_id = 7, itinerary_id = 42, begin_datetime = DateTime.Now, end_datetime = DateTime.Now, personal = 0, business = 1, distance = 66, created = DateTime.Now, updated = DateTime.Now }
+            );
         }
     }
 }

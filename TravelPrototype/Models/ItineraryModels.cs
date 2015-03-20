@@ -53,6 +53,7 @@ namespace TravelPrototype.Models
     public class ItineraryDBContext : DbContext
     {
         public DbSet<ItineraryModel> Itineraries { get; set; }
+        public DbSet<SegmentModel> Segments { get; set; }
     }
 
     //Segments 

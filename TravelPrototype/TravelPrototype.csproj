@@ -183,6 +183,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItineraryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SegmentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,6 +191,10 @@
     <Compile Include="Migrations\201503181507564_Inital.cs" />
     <Compile Include="Migrations\201503181507564_Inital.Designer.cs">
       <DependentUpon>201503181507564_Inital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503201557494_SegmentsFK.cs" />
+    <Compile Include="Migrations\201503201557494_SegmentsFK.Designer.cs">
+      <DependentUpon>201503201557494_SegmentsFK.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -266,6 +271,11 @@
     <Content Include="Views\Itinerary\Details.cshtml" />
     <Content Include="Views\Itinerary\Edit.cshtml" />
     <Content Include="Views\Itinerary\Index.cshtml" />
+    <Content Include="Views\Segment\Create.cshtml" />
+    <Content Include="Views\Segment\Delete.cshtml" />
+    <Content Include="Views\Segment\Details.cshtml" />
+    <Content Include="Views\Segment\Edit.cshtml" />
+    <Content Include="Views\Segment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +290,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503181507564_Inital.resx">
       <DependentUpon>201503181507564_Inital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503201557494_SegmentsFK.resx">
+      <DependentUpon>201503201557494_SegmentsFK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -6,8 +6,10 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Script.Serialization;
 using TravelPrototype.Models;
 
 namespace TravelPrototype.api
@@ -20,11 +22,21 @@ namespace TravelPrototype.api
         // GET: api/Traxo
         [HttpGet]
         [Route("")]
-        public IQueryable<ItineraryModel> GetItineraries()
+        public IHttpActionResult GetItineraries()
         {
             //return Request.CreateResponse(HttpStatusCode.OK);
+            //var responseStringBuilder = new StringBuilder();
             List<ItineraryModel> itineraryModelList = db.Itineraries.ToList<ItineraryModel>();
-            return db.Itineraries;
+            itineraryModelList[0].segments = db.Segments.ToList<SegmentModel>();
+
+            for (int i = 0; i < itineraryModelList.Count; i++)
+            {
+                itineraryModelList[i].segments = db.Segments.ToList<SegmentModel>();
+            }
+
+
+            string jsonResponse = (new JavaScriptSerializer()).Serialize(itineraryModelList);
+            return Ok(jsonResponse);
         }
 
         protected override void Dispose(bool disposing)

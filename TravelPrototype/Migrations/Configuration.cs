@@ -34,7 +34,7 @@ namespace TravelPrototype.Migrations
             );
 
             context.Segments.AddOrUpdate(i => i.id,
-                new SegmentModel { id = 40, member_id = 9, checkin_date = DateTime.Now, checkout_date = DateTime.Now, price = 105, number_of_rooms = 5, created = DateTime.Now, updated = DateTime.Now, departure_datetime = DateTime.Now, arrival_datetime = DateTime.Now, pickup_datetime = DateTime.Now, dropoff_datetime = DateTime.Now, start_datetime = DateTime.Now, end_datetime = DateTime.Now });
+                new SegmentModel { id = 40, ItineraryModel_ID = 42, member_id = 9, checkin_date = DateTime.Now, checkout_date = DateTime.Now, price = 105, number_of_rooms = 5, created = DateTime.Now, updated = DateTime.Now, departure_datetime = DateTime.Now, arrival_datetime = DateTime.Now, pickup_datetime = DateTime.Now, dropoff_datetime = DateTime.Now, start_datetime = DateTime.Now, end_datetime = DateTime.Now });
 
         }
     }

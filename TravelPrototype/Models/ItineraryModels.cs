@@ -60,6 +60,7 @@ namespace TravelPrototype.Models
     public class SegmentModel
     {
         public int id { get; set; }
+        public int? ItineraryModel_ID { get; set; }
         public int member_id { get; set; }
         public string type { get; set; }
         public string status { get; set; }
@@ -190,6 +191,12 @@ namespace TravelPrototype.Models
         public string end_time_zone_id { get; set; }
         public string activity_notes { get; set; }
 
+
+        public override string ToString()
+        {
+            string json = (new JavaScriptSerializer()).Serialize(this);
+            return json;
+        }
 
     }
 }

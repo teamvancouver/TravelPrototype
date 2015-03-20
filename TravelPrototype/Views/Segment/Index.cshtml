@@ -1,0 +1,717 @@
+﻿@model IEnumerable<TravelPrototype.Models.SegmentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.member_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hotel_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.normalized_hotel_chain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.admin_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkin_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkin_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.number_of_rooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.confirmation_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.support_phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.booking_agent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.room_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.room_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rate_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cancellation_policy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.harvested)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hotel_notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.metadata)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.airline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.iata_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.normalized_airline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flight_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seat_assignment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin_city_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin_admin_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin_country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin_lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin_lon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pax_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ticket_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.class_of_service)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.meal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stops)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipment_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipment_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure_terminal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure_gate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_terminal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_gate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.air_notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.normalized_car_company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_city_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_city_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_admin_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_lon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_city_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_city_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_admin_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_lon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dropoff_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reservation_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hours_of_operation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activity_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activity_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_city_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_admin_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_lon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_datetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_time_zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_time_zone_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activity_notes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.member_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hotel_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.normalized_hotel_chain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.admin_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkin_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkin_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkout_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkout_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.currency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.number_of_rooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.confirmation_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.support_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.booking_agent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rate_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cancellation_policy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.source)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.harvested)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hotel_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.metadata)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.airline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.iata_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.normalized_airline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flight_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seat_assignment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin_city_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin_admin_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin_country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin_lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin_lon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pax_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ticket_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.class_of_service)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stops)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipment_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipment_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure_terminal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure_gate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_terminal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_gate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.air_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.normalized_car_company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_city_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_city_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_admin_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_lon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_city_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_city_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_admin_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_lon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dropoff_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reservation_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hours_of_operation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activity_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activity_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_city_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_admin_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_lon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_datetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_time_zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_time_zone_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activity_notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -50,7 +50,7 @@ namespace TravelPrototype.api
 
         private bool ItineraryModelExists(int id)
         {
-            return db.Itineraries.Count(e => e.ID == id) > 0;
+            return db.Itineraries.Count(e => e.id == id) > 0;
         }
     }
 }

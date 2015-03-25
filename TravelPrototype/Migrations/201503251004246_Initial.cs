@@ -3,51 +3,52 @@ namespace TravelPrototype.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Inital : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
-            //CreateTable(
-            //    "dbo.ItineraryModels",
-            //    c => new
-            //        {
-            //            ID = c.Int(nullable: false, identity: true),
-            //            member_id = c.Int(nullable: false),
-            //            itinerary_id = c.Int(nullable: false),
-            //            status = c.String(),
-            //            first_name = c.String(),
-            //            last_name = c.String(),
-            //            destination = c.String(),
-            //            state = c.String(),
-            //            postal_code = c.String(),
-            //            country = c.String(),
-            //            begin_datetime = c.DateTime(nullable: false),
-            //            begin_time_zone = c.String(),
-            //            begin_time_zone_id = c.String(),
-            //            end_datetime = c.DateTime(nullable: false),
-            //            end_time_zone = c.String(),
-            //            end_time_zone_id = c.String(),
-            //            lat = c.String(),
-            //            lon = c.String(),
-            //            privacy = c.String(),
-            //            personal = c.Int(nullable: false),
-            //            business = c.Int(nullable: false),
-            //            verified = c.String(),
-            //            distance = c.Single(nullable: false),
-            //            duration = c.String(),
-            //            headline = c.String(),
-            //            harvested = c.String(),
-            //            created = c.DateTime(nullable: false),
-            //            updated = c.DateTime(nullable: false),
-            //        })
-            //    .PrimaryKey(t => t.ID);
-
+            CreateTable(
+                "dbo.ItineraryModels",
+                c => new
+                    {
+                        id = c.Int(nullable: false, identity: true),
+                        member_id = c.Int(nullable: false),
+                        itinerary_id = c.Int(nullable: false),
+                        status = c.String(),
+                        first_name = c.String(),
+                        last_name = c.String(),
+                        destination = c.String(),
+                        state = c.String(),
+                        postal_code = c.String(),
+                        country = c.String(),
+                        begin_datetime = c.DateTime(nullable: false),
+                        begin_time_zone = c.String(),
+                        begin_time_zone_id = c.String(),
+                        end_datetime = c.DateTime(nullable: false),
+                        end_time_zone = c.String(),
+                        end_time_zone_id = c.String(),
+                        lat = c.String(),
+                        lon = c.String(),
+                        privacy = c.String(),
+                        personal = c.Int(nullable: false),
+                        business = c.Int(nullable: false),
+                        verified = c.String(),
+                        distance = c.Single(nullable: false),
+                        duration = c.String(),
+                        headline = c.String(),
+                        harvested = c.String(),
+                        created = c.DateTime(nullable: false),
+                        updated = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.id);
+            
             CreateTable(
                 "dbo.SegmentModels",
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
                         member_id = c.Int(nullable: false),
+                        itinerary_id = c.Int(nullable: false),
                         type = c.String(),
                         status = c.String(),
                         hotel_name = c.String(),
@@ -162,20 +163,20 @@ namespace TravelPrototype.Migrations
                         end_time_zone = c.String(),
                         end_time_zone_id = c.String(),
                         activity_notes = c.String(),
-                        ItineraryModel_ID = c.Int(),
+                        ItineraryModel_id = c.Int(),
                     })
                 .PrimaryKey(t => t.id)
-                .ForeignKey("dbo.ItineraryModels", t => t.ItineraryModel_ID)
-                .Index(t => t.ItineraryModel_ID);
+                .ForeignKey("dbo.ItineraryModels", t => t.ItineraryModel_id)
+                .Index(t => t.ItineraryModel_id);
             
         }
         
         public override void Down()
         {
-            //DropForeignKey("dbo.SegmentModels", "ItineraryModel_ID", "dbo.ItineraryModels");
-            //DropIndex("dbo.SegmentModels", new[] { "ItineraryModel_ID" });
-            //DropTable("dbo.SegmentModels");
-            //DropTable("dbo.ItineraryModels");
+            DropForeignKey("dbo.SegmentModels", "ItineraryModel_id", "dbo.ItineraryModels");
+            DropIndex("dbo.SegmentModels", new[] { "ItineraryModel_id" });
+            DropTable("dbo.SegmentModels");
+            DropTable("dbo.ItineraryModels");
         }
     }
 }

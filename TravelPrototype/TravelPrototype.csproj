@@ -188,13 +188,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Log\LogWriter.cs" />
-    <Compile Include="Migrations\201503181507564_Inital.cs" />
-    <Compile Include="Migrations\201503181507564_Inital.Designer.cs">
-      <DependentUpon>201503181507564_Inital.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503201557494_SegmentsFK.cs" />
-    <Compile Include="Migrations\201503201557494_SegmentsFK.Designer.cs">
-      <DependentUpon>201503201557494_SegmentsFK.cs</DependentUpon>
+    <Compile Include="Migrations\201503251004246_Initial.cs" />
+    <Compile Include="Migrations\201503251004246_Initial.Designer.cs">
+      <DependentUpon>201503251004246_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -288,11 +284,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503181507564_Inital.resx">
-      <DependentUpon>201503181507564_Inital.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503201557494_SegmentsFK.resx">
-      <DependentUpon>201503201557494_SegmentsFK.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503251004246_Initial.resx">
+      <DependentUpon>201503251004246_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

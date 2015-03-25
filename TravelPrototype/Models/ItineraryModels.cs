@@ -10,7 +10,7 @@ namespace TravelPrototype.Models
 {
     public class ItineraryModel
     {
-        public int ID { get; set; }
+        public int id { get; set; }
         public int member_id { get; set; }
         public int itinerary_id { get; set; }
         public string status { get; set; }
@@ -60,8 +60,8 @@ namespace TravelPrototype.Models
     public class SegmentModel
     {
         public int id { get; set; }
-        public int? ItineraryModel_ID { get; set; }
         public int member_id { get; set; }
+        public int itinerary_id { get; set; }
         public string type { get; set; }
         public string status { get; set; }
         public string hotel_name { get; set; }

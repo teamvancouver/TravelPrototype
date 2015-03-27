@@ -35,8 +35,9 @@ namespace TravelPrototype.api
             }
 
 
-            string jsonResponse = (new JavaScriptSerializer()).Serialize(itineraryModelList);
-            return Ok(jsonResponse);
+            //string jsonResponse = (new JavaScriptSerializer()).Serialize(itineraryModelList);
+            //return Ok(jsonResponse);
+            return Ok(itineraryModelList);
         }
 
         protected override void Dispose(bool disposing)

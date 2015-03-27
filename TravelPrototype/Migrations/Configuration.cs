@@ -31,7 +31,7 @@ namespace TravelPrototype.Migrations
                  new ItineraryModel { id = 10, member_id = 7, itinerary_id = 42, begin_datetime = DateTime.Now, end_datetime = DateTime.Now, personal = 0, business = 1, distance = 66, created = DateTime.Now, updated = DateTime.Now } 
             );
 
-            context.Segments.AddOrUpdate(i => i.id,
+            context.Segments.AddOrUpdate(i => i.itinerary_id,
                 new SegmentModel { id = 10, member_id = 7, itinerary_id = 42, checkin_date = DateTime.Now, checkout_date = DateTime.Now, price = 105, number_of_rooms = 5, created = DateTime.Now, updated = DateTime.Now, departure_datetime = DateTime.Now, arrival_datetime = DateTime.Now, pickup_datetime = DateTime.Now, dropoff_datetime = DateTime.Now, start_datetime = DateTime.Now, end_datetime = DateTime.Now }
             );
          }
